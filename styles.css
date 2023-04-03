@@ -32,3 +32,15 @@
   margin: 0;
   padding: 0;
 }
+
+.qs__link {
+  color: currentColor;
+  text-decoration: none;
+}
+.qs__link:hover {
+  text-decoration: underline;
+}
+
+.qs__link--current {
+  color: blue;
+}
