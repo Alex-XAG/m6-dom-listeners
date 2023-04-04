@@ -44,3 +44,15 @@
 .qs__link--current {
   color: blue;
 }
+
+.color-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.color-picker__option {
+  min-width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
