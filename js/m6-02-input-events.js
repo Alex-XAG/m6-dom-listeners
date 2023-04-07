@@ -7,7 +7,7 @@
 const refs = {
   input: document.querySelector(".js-input"),
   nameLabel: document.querySelector(".js-button > span"),
-  license: document.querySelector(".js-license"),
+  licenseCheckbox: document.querySelector(".js-license"),
   btn: document.querySelector(".js-button"),
 };
 
@@ -21,7 +21,8 @@ const refs = {
 
 // refs.input.addEventListener("change", onInputChange); /// Only for radio-buttons snd checkboxes
 
-refs.input.addEventListener("input", onInputChange);
+refs.input.addEventListener("input", onInputChange); // input event
+refs.licenseCheckbox.addEventListener("change", onLicenseChange);
 
 function onInputFocus() {
   console.log("Input was focused - event focus");
@@ -32,8 +33,15 @@ function onInputBlur() {
 }
 
 function onInputChange(event) {
-  console.log(event);
-  console.log(event.currentTarget.value);
+  // console.log(event);
+  // console.log(event.currentTarget.value);
+
+  refs.nameLabel.textContent = event.currentTarget.value;
 }
 
-function onLicenseChange() {}
+function onLicenseChange(event) {
+  // console.log("changed");
+  console.log(event.currentTarget.checked);
+
+  refs.btn.disabled = !event.currentTarget.checked;
+}
