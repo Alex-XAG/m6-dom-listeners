@@ -1,0 +1,22 @@
+.gallery {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-item {
+  width: 320px;
+  height: 215px;
+  margin: 0;
+  padding: 0;
+}
+.gallery-img {
+  width: 320px;
+  height: 215px;
+  margin: 0;
+  padding: 0;
+}
